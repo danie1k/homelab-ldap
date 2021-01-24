@@ -1,0 +1,18 @@
+---
+version: '3.7'
+
+services:
+  ldap:
+    image: homelab-ldap:latest
+    environment:
+      DOMAIN_NAME: "example.com"
+      LDAP_ROOT_USERNAME: "root"
+      LDAP_ROOT_PASSWORD: '{SSHA}20wM3aP+sZydN3Zrocz9WDZ+mRLxjMtv'
+    ports:
+      - 8088:80
+      - 389:389
+    volumes:
+      - ldap-data:/var/lib/openldap/openldap-data/
+
+volumes:
+  ldap-data:

@@ -1,0 +1,4 @@
+dn: ${LDAP_ROOTDN}
+objectClass: organizationalRole
+cn: ${LDAP_ROOT_USERNAME}
+description: Directory Manager

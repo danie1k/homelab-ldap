@@ -4,12 +4,17 @@
 #
 #    pip-compile requirements-dev.in
 #
+click==7.1.2
+    # via pip-tools
 pathspec==0.8.1
     # via yamllint
+pip-tools==5.5.0
+    # via -r requirements-dev.in
 pyyaml==5.4.1
     # via yamllint
 yamllint==1.25.0
     # via -r requirements-dev.in
 
 # The following packages are considered to be unsafe in a requirements file:
+# pip
 # setuptools

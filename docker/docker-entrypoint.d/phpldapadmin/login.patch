@@ -1,0 +1,10 @@
+--- a/login.php
++++ b/login.php
+@@ -20,6 +20,7 @@
+     $user             = array();
+     $user['login']    = get_request('login');
+     $user['password'] = get_request('login_pass');
++    $user['password'] = str_replace('&amp;', '&', get_request('login_pass'));
+
+     if ($user['login'] && !strlen($user['password'])) {
+         system_message(array(

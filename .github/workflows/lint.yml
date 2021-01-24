@@ -1,0 +1,35 @@
+---
+name: Lint
+
+'on':
+  push:
+    branches: ['*']
+  workflow_dispatch:
+
+jobs:
+  hadolint:
+    name: Hadolint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker://pipelinecomponents/hadolint:latest
+        with:
+          args: hadolint Dockerfile
+
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker://pipelinecomponents/shellcheck:latest
+        with:
+          args: shellcheck docker/docker-entrypoint.sh
+
+  yamllint:
+    name: Yamllint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: docker://pipelinecomponents/yamllint:latest
+        with:
+          args: yamllint .

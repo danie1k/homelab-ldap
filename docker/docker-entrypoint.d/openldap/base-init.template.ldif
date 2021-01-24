@@ -1,0 +1,6 @@
+dn: ${LDAP_DN}
+objectClass: dcObject
+objectClass: organization
+${LDAP_DC_VERTICAL}
+o: ${DOMAIN_NAME}
+description: Example directory
