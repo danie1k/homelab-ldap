@@ -114,12 +114,9 @@ readonly LDAP_DN="dc=${DOMAIN_NAME//\./,dc=}"
 readonly LDAP_ROOTDN="cn=${LDAP_ROOT_USERNAME},${LDAP_DN}"
 # shellcheck disable=SC2154
 readonly LDAP_ROOTPW="${LDAP_ROOT_PASSWORD}"
-# shellcheck disable=SC2001
-readonly LDAP_DC_VERTICAL=$(echo "${LDAP_DN//=/: }" | sed 's/,/\n/g')
 export LDAP_DN
 export LDAP_ROOTDN
 export LDAP_ROOTPW
-export LDAP_DC_VERTICAL
 
 init_nginx
 init_openldap

@@ -20,7 +20,8 @@ Based on:
 
 ## Environment Variables you should set
 
-- `DOMAIN_NAME` -- Domain name for LDAP suffix
+- `DOMAIN_NAME` -- Domain name for LDAP suffix (i.e.: `example.com`)
+- `DOMAIN_NAME_DC` -- [DomainComponent] for LDAP database (single word, no dots, i.e.: `example`)
 - `LDAP_ROOT_USERNAME` -- root/admin user name for [OpenLDAP]
 - `LDAP_ROOT_PASSWORD` -- password for [OpenLDAP] root/admin user \*
 
@@ -75,6 +76,7 @@ Based on:
 MIT
 
 
+[DomainComponent]: https://ldapwiki.com/wiki/DomainComponent
 [LDIF]: https://www.openldap.org/software//man.cgi?query=LDIF&sektion=5&apropos=0&manpath=OpenLDAP+2.4-Release
 [OpenLDAP]: https://www.openldap.org/
 [nginx]: https://www.nginx.com/

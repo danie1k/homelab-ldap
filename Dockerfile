@@ -22,6 +22,7 @@ COPY ./docker/ /
 
 # OpenLDAP
 ENV DOMAIN_NAME="local"
+ENV DOMAIN_NAME_DC="local"
 ENV LDAPCONF=/etc/openldap/slapd.conf
 ENV LDAP_CONF_DIR=/etc/openldap/slapd.d
 ENV LDAP_INIT_DIR=/var/lib/openldap/openldap-init
